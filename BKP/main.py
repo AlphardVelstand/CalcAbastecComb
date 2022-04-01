@@ -107,7 +107,6 @@ class MainWindow(QMainWindow, Ui_Form):
 
             limpar()
 
-
         def limpar():
             # Limpando campos de digitação
             self.lineEditPosto1.setText('')
@@ -116,14 +115,13 @@ class MainWindow(QMainWindow, Ui_Form):
             # Limpando campo resultado
             # tela.listWidgetResultado.clear()
 
-
         def sair(self):
             sys.exit()
 
 
-self.pushButtonCalcular.clicked.connect(calcular)
-self.pushButtonSair.clicked.connect(sair)
-self.pushButtonLimpar.clicked.connect(limpar)
+        self.pushButtonCalcular.clicked.connect(calcular)
+        self.pushButtonSair.clicked.connect(sair)
+        self.pushButtonLimpar.clicked.connect(limpar)
 
 if __name__ =="__main__":
     app = QApplication(sys.argv)
