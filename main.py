@@ -64,36 +64,36 @@ class MainWindow(QMainWindow, Ui_Form):
         # Mensagem com resultado
         msgRespo = QMessageBox()
         msgRespo.setIcon(QMessageBox.Information)
-        msgRespo.setWindowTitle("Valor para encher o tanque no centro")
-        msgRespo.setText(f"Valor para encher o tanque a {precoGeral} = {tanqueCheioGeral}")
+        msgRespo.setWindowTitle("Valor: '{:.2f}'".format(precoGeral1))
+        msgRespo.setText("Valor para encher o tanque de: {:.0f} Litros há {:.2f} = {:.2f}".format(qtdLitrosTanque1,precoGeral1, tanqueCheioGeral1))
         msgRespo.exec()
 
         # Mensagem com resultado
         msgRespo2 = QMessageBox()
         msgRespo2.setIcon(QMessageBox.Information)
-        msgRespo2.setWindowTitle("Valor para encher o tanque com gasolina mais barata")
-        msgRespo2.setText(f" Valor para encher o tanque com {precoComDesc} = {tanqueCheioDesc}")
+        msgRespo2.setWindowTitle("Valor: '{:.2f}'".format(precoComDesc1))
+        msgRespo2.setText("Valor para encher o tanque de: {:.0f} Litros há: {:.2f} = {:.2f}".format(qtdLitrosTanque1,precoComDesc1, tanqueCheioDesc1))
         msgRespo2.exec()
 
         # Mensagem com resultado
         msgRespo3 = QMessageBox()
         msgRespo3.setIcon(QMessageBox.Information)
         msgRespo3.setWindowTitle("Diferenção de um posto para outro")
-        msgRespo3.setText(f"Valor da diferença em R$ no litro de um posto para o outro: R$ {difEmReais}")
+        msgRespo3.setText("Valor da diferença em R$ no litro de um posto para o outro: R$ {:.2f}".format(difEmReais1))
         msgRespo3.exec()
 
         # Mensagem com resultado
         msgRespo4 = QMessageBox()
         msgRespo4.setIcon(QMessageBox.Information)
         msgRespo4.setWindowTitle("Percentual de desconto")
-        msgRespo4.setText(f"Percentual de desconto {percDesc}")
+        msgRespo4.setText("Percentual de desconto: {:.0f}%".format(percDesc1))
         msgRespo4.exec()
 
         # Mensagem com resultado
         msgRespo5 = QMessageBox()
         msgRespo5.setIcon(QMessageBox.Information)
-        msgRespo5.setWindowTitle("Percentual de desconto")
-        msgRespo5.setText(f"Quantos litros abastecer para economizar 1 Litro: {litrosPorLitro}")
+        msgRespo5.setWindowTitle("Economizando 1 Litro: {:.2f}".format(litrosPorLitro1))
+        msgRespo5.setText("Quantos litros abastecer para economizar 1 Litro: {:.2f} Litros".format(litrosPorLitro1))
         msgRespo5.exec()
 
         # Mensagem com resultado
@@ -101,7 +101,7 @@ class MainWindow(QMainWindow, Ui_Form):
         msgRespo6.setIcon(QMessageBox.Information)
         msgRespo6.setWindowTitle("Custo abastecimento")
         msgRespo6.setText(
-            f"O custo para abastecer {litrosPorLitro} Litros no valor {precoComDesc} será R$ {custoAbastPt1}")
+            "O custo para abastecer: {:.2f} Litros no valor: {:.2f} será R$ {:.2f} ".format(litrosPorLitro1, precoComDesc1, custoAbastPt1))
         msgRespo6.exec()
 
         # Mensagem com resultado
@@ -109,7 +109,7 @@ class MainWindow(QMainWindow, Ui_Form):
         msgRespo7.setIcon(QMessageBox.Information)
         msgRespo7.setWindowTitle("Custo abastecimento")
         msgRespo7.setText(
-            f"O custo para abastecer {litrosPorLitro} Litros no valor {precoGeral1} será R$ {custoAbastPt2}")
+            "O custo para abastecer: {:.2f} Litros no valor: {:.2f} será R$ {:.2f}".format(litrosPorLitro1,precoGeral1,custoAbastPt2))
         msgRespo7.exec()
 
         self.limpar()
@@ -122,7 +122,6 @@ class MainWindow(QMainWindow, Ui_Form):
         self.lineEditTanque.setText('')
         # Limpando campo resultado
         # tela.listWidgetResultado.clear()
-
 
     def sair(self):
         sys.exit()
